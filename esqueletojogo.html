@@ -1,0 +1,37 @@
+//sem animação, apenas o esqueleto do jogo.
+<html>
+<head>
+    <title>Jogo da raquete</title>
+</head>
+<body>
+    <canvas id="folha" width="600" height="500"></canvas>
+
+    <script>
+        //Declarando variáveis
+        var folhaDesenho = document.getElementById("folha");
+        var areaDesenho = folhaDesenho.getContext("2d");
+
+        var larguraCampo = 600;
+        var alturaCampo = 500;
+        var larguraLinha = 5;
+        var dimensoesBola = 10;
+        var alturaRaquete = 55;
+
+
+        // Definindo cor e largura do campo
+        areaDesenho.fillStyle = '#267326';
+        areaDesenho.fillRect(0, 0, larguraCampo, alturaCampo);
+
+        //Definindo linha central e cor  
+        areaDesenho.fillStyle = '#a1c4c4';
+        areaDesenho.fillRect(larguraCampo/2 - larguraLinha/2, 0, larguraLinha, alturaCampo);
+
+        //Definindo largura e tamanho da raquete 1 esquerda
+        areaDesenho.fillRect(5, 200, larguraLinha, alturaRaquete);
+        //Definindo largura e tamanho da raquete 2 direita
+        areaDesenho.fillRect(larguraCampo - 10, 200, larguraLinha, alturaRaquete);
+        // Definindo largura e tamanho da bola 
+        areaDesenho.fillRect(115, 200, dimensoesBola, dimensoesBola);
+    </script>
+</body>
+</html>
